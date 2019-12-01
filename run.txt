@@ -1,0 +1,5 @@
+javac InterfaceName.java  RemoteClass.java  Server.java  Client.java
+rmic RemoteClass
+start rmiregistry
+java -Djava.security.policy =UrlOfPolicyFile   ServerName
+java ClientName
