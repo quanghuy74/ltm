@@ -5,11 +5,11 @@ import java.rmi.Naming;
 public class CalculServer {
     public static void main(String[] args){
         try{
-            // Load the service
+            // tạo ra các đối tượng cho phép gọi từ xa
             RMICalculimpl calculService = new RMICalculimpl();
             String res = "rmi://localhost/RMICalcul";
 
-            // Register with service
+            // đăng ký cho một đối tượng từ xa
             Naming.rebind(res, calculService);
         } catch(Exception e){
             System.err.println("Error: " + e.getMessage());
